@@ -1,0 +1,61 @@
+::placeholder { color: black; }
+body{
+    margin: 0;
+    padding: 0;
+    /* background-color: #34495e; */
+    background: url(background.jpeg);
+    font-family: sans-serif;
+}
+.box h1{
+    color: black;
+    text-transform: uppercase;
+}
+.box{
+    width: 300px;
+    padding: 40px;
+    background: #3498db;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0.7;
+}
+
+.box .username, .password{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;   
+    text-align: center;
+    border: 2px solid #2c3e50;
+    padding: 15px;
+    width: 200px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box .username:focus, .password:focus{
+    width: 280px;
+    border: 3px solid #ecf0f1;
+}
+.box .login{
+    border: 0;
+    background: none;
+    display: block;
+    margin: 10px auto;   
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 8px;
+    width: 100px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+.box .login:hover{
+    background: #2ecc71;
+    cursor: pointer;
+}

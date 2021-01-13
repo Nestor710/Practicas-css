@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(248, 212, 212);
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:repeat(4, auto) ;
+
+    grid-template-areas: "header header header"
+                         "contenido contenido aside" 
+                         "widget-1 widget-2 aside" 
+                         "footer footer footer";
+}
+.contenedor > div,
+.contenedor .header,    
+.contenedor .contenido,
+.contenedor .aside,
+.contenedor .footer {
+    background-color: #fff;
+    padding: 28px;
+    border-radius: 4px;
+}
+
+.contenedor .header{
+    background-color: #12203e;
+    color: white;
+    grid-area: header;
+/*     grid-column-start: 1;
+    grid-column-end: 4;
+    text-align: center; */
+}
+
+.contenedor .contenido{
+    grid-area: contenido;
+    /* grid-column: span 2; */
+}
+.contenedor .aside{
+    grid-area: aside;
+    /* grid-column: 3 / 4; */
+    background-color: orange;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* grid-row: 2 / 4; */
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2{
+    background-color: rgb(74, 74, 253);
+    color: white;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor .widget-1{
+    grid-area: widget-1;
+}
+.contenedor .widget-2{
+    grid-area: widget-2;
+}
+
+.contenedor .footer{
+    grid-area: footer;
+    background-color: slategray;
+    display: flex;
+/*     grid-column-start: -1;
+    grid-column-end: -4; */
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 700px){
+
+    .contenedor{
+        grid-template-areas: "header header header"
+        "contenido contenido contenido" 
+        "aside aside aside"
+        "widget-1 widget-1 widget-2" 
+        "footer footer footer";
+    }
+
+}
